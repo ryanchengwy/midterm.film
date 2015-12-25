@@ -181,6 +181,9 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="eLN-3D-8BP" kind="show" id="l5p-jG-P50"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -208,18 +211,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="knt-7S-YgV">
-                                <rect key="frame" x="47" y="88" width="485" height="455"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knt-7S-YgV">
+                                <rect key="frame" x="0.0" y="88" width="600" height="455"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5159" translatesAutoresizingMaskIntoConstraints="NO" id="ws3-JT-awf">
-                                        <rect key="frame" x="180" y="18" width="200" height="200"/>
+                                        <rect key="frame" x="200" y="18" width="200" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="DPJ-UJ-GMd"/>
                                             <constraint firstAttribute="height" constant="200" id="TRG-Dq-bbo"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWj-7n-lWP">
-                                        <rect key="frame" x="130" y="259" width="300" height="2008.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWj-7n-lWP">
+                                        <rect key="frame" x="150" y="259" width="300" height="2008.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="PfO-C4-lYw"/>
                                         </constraints>
@@ -261,23 +264,33 @@
                                     <constraint firstItem="SWj-7n-lWP" firstAttribute="centerX" secondItem="knt-7S-YgV" secondAttribute="centerX" id="Fvq-hN-Wed"/>
                                     <constraint firstItem="SWj-7n-lWP" firstAttribute="top" secondItem="ws3-JT-awf" secondAttribute="bottom" constant="41" id="Ix6-VT-60N"/>
                                     <constraint firstAttribute="bottom" secondItem="SWj-7n-lWP" secondAttribute="bottom" constant="20" id="cv1-ng-s6J"/>
+                                    <constraint firstAttribute="trailing" secondItem="ws3-JT-awf" secondAttribute="trailing" constant="50" id="grr-up-CEe"/>
                                     <constraint firstItem="ws3-JT-awf" firstAttribute="top" secondItem="knt-7S-YgV" secondAttribute="topMargin" constant="10" id="mxk-tJ-398"/>
+                                    <constraint firstItem="ws3-JT-awf" firstAttribute="leading" secondItem="knt-7S-YgV" secondAttribute="leading" priority="999" constant="50" id="v4y-Bi-7od"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="knt-7S-YgV" secondAttribute="trailing" id="0e1-ce-556"/>
-                            <constraint firstItem="knt-7S-YgV" firstAttribute="top" secondItem="9vK-6B-JdY" secondAttribute="bottom" constant="24" id="MOA-jD-cdX"/>
+                            <constraint firstAttribute="trailing" secondItem="knt-7S-YgV" secondAttribute="trailing" id="LdL-fD-dmF"/>
+                            <constraint firstItem="knt-7S-YgV" firstAttribute="top" secondItem="9vK-6B-JdY" secondAttribute="bottom" constant="24" id="aLR-dw-ry4"/>
                             <constraint firstItem="knt-7S-YgV" firstAttribute="leading" secondItem="90o-8d-bSe" secondAttribute="leadingMargin" id="xKS-qa-vU7"/>
-                            <constraint firstItem="SC1-zK-zQF" firstAttribute="top" secondItem="knt-7S-YgV" secondAttribute="bottom" constant="8" id="zdx-3v-cQa"/>
+                            <constraint firstItem="SC1-zK-zQF" firstAttribute="top" secondItem="knt-7S-YgV" secondAttribute="bottom" constant="8" id="y7W-lt-I7g"/>
+                            <constraint firstItem="knt-7S-YgV" firstAttribute="leading" secondItem="90o-8d-bSe" secondAttribute="leading" id="z1Q-ji-cdD"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0e1-ce-556"/>
+                                <exclude reference="xKS-qa-vU7"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="史努比" id="WhE-32-GQe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NL6-hW-2dD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2411" y="1011"/>
+            <point key="canvasLocation" x="2563" y="355"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="psJ-Ae-ZDI">
@@ -334,6 +347,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GaU-ge-L03" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1051" y="1730"/>
+        </scene>
+        <!--紐約愛未眠-->
+        <scene sceneID="yxe-wB-jtV">
+            <objects>
+                <viewController id="eLN-3D-8BP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gz3-5Y-jpa"/>
+                        <viewControllerLayoutGuide type="bottom" id="D9B-PV-cfj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="00k-OD-eO6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pfp-PG-Fwy">
+                                <rect key="frame" x="0.0" y="88" width="600" height="455"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6009" translatesAutoresizingMaskIntoConstraints="NO" id="KVl-Ur-dM0">
+                                        <rect key="frame" x="200" y="18" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="MQc-3a-zAO"/>
+                                            <constraint firstAttribute="height" constant="200" id="d8u-ei-vfc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kd-8i-s3M">
+                                        <rect key="frame" x="150" y="259" width="300" height="507.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="VgG-ca-mWa"/>
+                                        </constraints>
+                                        <mutableString key="text">★《美國隊長》克里斯伊凡首部自導自演愛情喜劇！
+★ 多倫多影展世界首映，浪漫氛圍廣受國際媒體好評！
+★ 劇情真誠美好，妙語如珠媲美《愛在》系列三部曲！
+★《雨人》《新娘不是我》金牌編劇最新力作！
+
+《在天色破曉之前，他們決定再給愛一次機會…》
+
+趕著凌晨一點半的最後一班火車，年輕女子布魯克（艾莉絲伊芙飾演）在途中被搶走了皮包。身無分文的她遊蕩在紐約街頭，正當她在中央車站徘徊時，另一位同樣被困在車站的小號樂手尼克（克里斯伊凡飾演）對她伸出援手。兩人一拍即合，決定一邊尋找布魯克被搶走的錢包，一邊散步回家。隨著時間一分一秒流逝，兩人穿過大大小小的巷弄¬，走過形形色色的霓虹燈，彼此也逐漸開始熟悉，並在生命中看見了不同的方向…。
+更新日期：2015-12-23</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8kd-8i-s3M" secondAttribute="bottom" constant="20" id="1iH-16-WmD"/>
+                                    <constraint firstItem="KVl-Ur-dM0" firstAttribute="top" secondItem="Pfp-PG-Fwy" secondAttribute="topMargin" constant="10" id="1u4-0p-wgB"/>
+                                    <constraint firstItem="8kd-8i-s3M" firstAttribute="top" secondItem="KVl-Ur-dM0" secondAttribute="bottom" constant="41" id="9Vh-6Y-jhg"/>
+                                    <constraint firstItem="KVl-Ur-dM0" firstAttribute="leading" secondItem="Pfp-PG-Fwy" secondAttribute="leading" priority="999" constant="50" id="bzw-if-ZvI"/>
+                                    <constraint firstItem="KVl-Ur-dM0" firstAttribute="centerX" secondItem="Pfp-PG-Fwy" secondAttribute="centerX" id="e9x-3B-46H"/>
+                                    <constraint firstItem="8kd-8i-s3M" firstAttribute="centerX" secondItem="Pfp-PG-Fwy" secondAttribute="centerX" id="tP1-TV-9Uv"/>
+                                    <constraint firstAttribute="trailing" secondItem="KVl-Ur-dM0" secondAttribute="trailing" constant="50" id="vug-6b-i8Z"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pfp-PG-Fwy" firstAttribute="leading" secondItem="00k-OD-eO6" secondAttribute="leadingMargin" id="76k-BB-E3u"/>
+                            <constraint firstItem="D9B-PV-cfj" firstAttribute="top" secondItem="Pfp-PG-Fwy" secondAttribute="bottom" constant="8" id="7LL-E9-m0w"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pfp-PG-Fwy" secondAttribute="trailing" id="Mef-NK-ijf"/>
+                            <constraint firstAttribute="trailing" secondItem="Pfp-PG-Fwy" secondAttribute="trailing" id="Pm2-AN-tTj"/>
+                            <constraint firstItem="Pfp-PG-Fwy" firstAttribute="leading" secondItem="00k-OD-eO6" secondAttribute="leading" id="gCK-7X-9hS"/>
+                            <constraint firstItem="Pfp-PG-Fwy" firstAttribute="top" secondItem="Gz3-5Y-jpa" secondAttribute="bottom" constant="24" id="um2-cq-veF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Mef-NK-ijf"/>
+                                <exclude reference="76k-BB-E3u"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="紐約愛未眠" id="vDK-Pn-vMP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WJC-Vg-Hms" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2572" y="1054"/>
         </scene>
     </scenes>
     <resources>
