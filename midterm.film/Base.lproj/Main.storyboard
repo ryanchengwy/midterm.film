@@ -1,25 +1,343 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rAW-rc-sMj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--電影-->
+        <scene sceneID="MF7-DX-x7O">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="150-1C-ApB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="電影" id="gdy-jv-X57"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rnA-KK-bKh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gT1-QH-APG" kind="relationship" relationship="rootViewController" id="VM2-z6-76V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EXw-AU-Egf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1051" y="997"/>
+        </scene>
+        <!--本週新片-->
+        <scene sceneID="8dG-FG-NEH">
+            <objects>
+                <tableViewController id="gT1-QH-APG" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2dh-Am-ofz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="20" maxY="0.0"/>
+                        <sections>
+                            <tableViewSection id="gYq-5U-aCb">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="213" id="u8d-tN-2MP">
+                                        <rect key="frame" x="0.0" y="64" width="600" height="213"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u8d-tN-2MP" id="apa-f5-1Wb">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="213"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5159" translatesAutoresizingMaskIntoConstraints="NO" id="HTe-Bh-XBg">
+                                                    <rect key="frame" x="18" y="5" width="131" height="180"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="HTe-Bh-XBg" secondAttribute="height" multiplier="93:128" id="2IM-MK-Mmb"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="史努比" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plJ-lu-R0p">
+                                                    <rect key="frame" x="159" y="13" width="75" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="DMT-R2-tD9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1m-LU-5N0">
+                                                    <rect key="frame" x="442" y="174.5" width="107" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="107" id="3KM-Vd-eas"/>
+                                                    </constraints>
+                                                    <string key="text">上映日期：2015-12-24
+2015-12-24</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="3KM-Vd-eas"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTn-Su-7hQ">
+                                                    <rect key="frame" x="18" y="195" width="521" height="10"/>
+                                                    <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="10" id="tu2-9H-F2A"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="plJ-lu-R0p" firstAttribute="top" secondItem="apa-f5-1Wb" secondAttribute="topMargin" constant="5" id="1B1-py-YIt"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="BTn-Su-7hQ" secondAttribute="trailing" constant="20" id="3cN-3h-lOu"/>
+                                                <constraint firstItem="HTe-Bh-XBg" firstAttribute="leading" secondItem="apa-f5-1Wb" secondAttribute="leadingMargin" constant="10" id="4oW-6h-pZf"/>
+                                                <constraint firstItem="HTe-Bh-XBg" firstAttribute="top" secondItem="apa-f5-1Wb" secondAttribute="top" constant="5" id="Qp7-jD-cEa"/>
+                                                <constraint firstItem="plJ-lu-R0p" firstAttribute="leading" secondItem="HTe-Bh-XBg" secondAttribute="trailing" constant="10" id="Ugc-hV-JnD"/>
+                                                <constraint firstItem="plJ-lu-R0p" firstAttribute="top" secondItem="apa-f5-1Wb" secondAttribute="topMargin" constant="5" id="V6R-ba-86F"/>
+                                                <constraint firstItem="BTn-Su-7hQ" firstAttribute="top" secondItem="HTe-Bh-XBg" secondAttribute="bottom" constant="10" id="Xmc-P5-xdF"/>
+                                                <constraint firstItem="BTn-Su-7hQ" firstAttribute="leading" secondItem="apa-f5-1Wb" secondAttribute="leadingMargin" constant="10" id="aHy-td-51G"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="F1m-LU-5N0" secondAttribute="bottom" constant="18" id="e52-DO-fvB"/>
+                                                <constraint firstItem="HTe-Bh-XBg" firstAttribute="bottom" secondItem="apa-f5-1Wb" secondAttribute="bottomMargin" constant="5" id="gR0-b5-kkP"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="BTn-Su-7hQ" secondAttribute="bottom" id="jgH-Sl-L7Q"/>
+                                                <constraint firstItem="HTe-Bh-XBg" firstAttribute="top" secondItem="apa-f5-1Wb" secondAttribute="topMargin" constant="5" id="sD8-8n-t3v"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="F1m-LU-5N0" secondAttribute="trailing" constant="10" id="w5S-ai-kvO"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="gR0-b5-kkP"/>
+                                                    <exclude reference="sD8-8n-t3v"/>
+                                                    <exclude reference="V6R-ba-86F"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="DLK-WO-V0Q" kind="show" id="4cm-Gb-qKa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="213" id="feR-aq-jIB">
+                                        <rect key="frame" x="0.0" y="277" width="600" height="213"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="feR-aq-jIB" id="ecE-u7-j4H">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="213"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6009" translatesAutoresizingMaskIntoConstraints="NO" id="8z1-KT-Cmz">
+                                                    <rect key="frame" x="18" y="5" width="131" height="180"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="8z1-KT-Cmz" secondAttribute="height" multiplier="93:128" id="mCy-X1-ixk"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="紐約愛未眠" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymK-M3-AhJ">
+                                                    <rect key="frame" x="159" y="13" width="125" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="e3Z-vF-Kdp"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T68-vw-aDw">
+                                                    <rect key="frame" x="442" y="175" width="107" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="176" id="jys-pR-tBu"/>
+                                                    </constraints>
+                                                    <string key="text">上映日期：2015-12-24
+2015-12-24</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="jys-pR-tBu"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ukg-7X-EIu">
+                                                    <rect key="frame" x="18" y="195" width="521" height="10"/>
+                                                    <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="10" id="y0V-aJ-cF8"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ymK-M3-AhJ" firstAttribute="leading" secondItem="8z1-KT-Cmz" secondAttribute="trailing" constant="10" id="7jd-Id-cjJ"/>
+                                                <constraint firstItem="Ukg-7X-EIu" firstAttribute="leading" secondItem="ecE-u7-j4H" secondAttribute="leadingMargin" constant="10" id="Hx8-mo-rJ1"/>
+                                                <constraint firstItem="8z1-KT-Cmz" firstAttribute="top" secondItem="ecE-u7-j4H" secondAttribute="top" constant="5" id="JYD-Cn-f4f"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ukg-7X-EIu" secondAttribute="bottom" id="Lod-kr-RWZ"/>
+                                                <constraint firstItem="ymK-M3-AhJ" firstAttribute="top" secondItem="ecE-u7-j4H" secondAttribute="topMargin" constant="5" id="NrP-0A-5XD"/>
+                                                <constraint firstItem="8z1-KT-Cmz" firstAttribute="top" secondItem="ecE-u7-j4H" secondAttribute="topMargin" constant="5" id="OhW-ry-wHu"/>
+                                                <constraint firstItem="Ukg-7X-EIu" firstAttribute="top" secondItem="8z1-KT-Cmz" secondAttribute="bottom" constant="10" id="cB5-xJ-s5e"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="T68-vw-aDw" secondAttribute="trailing" constant="10" id="dlP-lt-ho3"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="T68-vw-aDw" secondAttribute="bottom" constant="18" id="fbX-Bb-CwJ"/>
+                                                <constraint firstItem="ymK-M3-AhJ" firstAttribute="top" secondItem="ecE-u7-j4H" secondAttribute="topMargin" constant="5" id="rkA-Uq-abI"/>
+                                                <constraint firstItem="8z1-KT-Cmz" firstAttribute="leading" secondItem="ecE-u7-j4H" secondAttribute="leadingMargin" constant="10" id="tEU-9s-PCO"/>
+                                                <constraint firstItem="8z1-KT-Cmz" firstAttribute="bottom" secondItem="ecE-u7-j4H" secondAttribute="bottomMargin" constant="5" id="uwa-iP-Ibu"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ukg-7X-EIu" secondAttribute="trailing" constant="20" id="yaI-Kk-7WM"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="uwa-iP-Ibu"/>
+                                                    <exclude reference="OhW-ry-wHu"/>
+                                                    <exclude reference="NrP-0A-5XD"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="gT1-QH-APG" id="4n8-RB-7Js"/>
+                            <outlet property="delegate" destination="gT1-QH-APG" id="Tmz-hS-qz5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="本週新片" id="qd0-Bc-B8k"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bKH-sI-h7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1737" y="1011"/>
+        </scene>
+        <!--史努比-->
+        <scene sceneID="3Qd-W2-Bxa">
+            <objects>
+                <viewController id="DLK-WO-V0Q" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9vK-6B-JdY"/>
+                        <viewControllerLayoutGuide type="bottom" id="SC1-zK-zQF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="90o-8d-bSe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="knt-7S-YgV">
+                                <rect key="frame" x="47" y="88" width="485" height="455"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5159" translatesAutoresizingMaskIntoConstraints="NO" id="ws3-JT-awf">
+                                        <rect key="frame" x="180" y="18" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="DPJ-UJ-GMd"/>
+                                            <constraint firstAttribute="height" constant="200" id="TRG-Dq-bbo"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWj-7n-lWP">
+                                        <rect key="frame" x="130" y="259" width="300" height="2008.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="PfO-C4-lYw"/>
+                                        </constraints>
+                                        <mutableString key="text">★ 全球最經典《花生漫畫》首度以3D動畫繪製躍上大銀幕《冰原歷險記》《里約大冒險》系列頂尖動畫製作團隊－藍天工作室操刀
+★ 原創者查爾斯舒茲第二、三代 克雷格舒茲及布萊恩舒茲共同擔任編劇
+
+查理布朗、史努比、露西、奈勒斯和所有廣受喜愛的《花生漫畫》伙伴即將前所未有地在大螢幕初登場，並以3D動畫形式與大家見面。查理布朗這位史上最受歡迎的小人物，即將展開他的最大使命，而他最可愛的伙伴史奴比要飛上天空去追逐他的頭號剋星—紅色男爵。來自查爾斯舒茲（Charles M. Schulz）的天馬行空，以及《冰原歷險記》製作團隊操刀，《史努比 The Peanuts Movie》將證明每個小人物也都能有一片天！
+
+查爾斯舒茲遺留下的珍寶
+1950年10月2日，查爾斯舒茲創造出的角色查理布朗、薛密和佩蒂在七份不同報紙中問世，也展開一場改變流行文化及幽默的50年卡通畫家旅程。查爾斯舒茲的連環漫畫被譽為是二十世紀最偉大的漫畫之一，當中的角色也開展出蓬勃發展的產業，同時也透過查理布朗為亟需出頭的小人物發聲。
+
+查理布朗在流行文化中佔有獨特的位置，他是唯一一個在1950年10月2日的第一刊連環漫畫，以及2000年2月13日最後一刊連環漫畫中都有出現的《花生漫畫》角色。（史努比首次出場是1950年10月4日）
+歷經種種人生考驗和苦難，包含吃風箏的樹、棒球比賽連連失利，或是露西的種種餿主意，他永不消滅的樂觀態度帶給人們希望，進而引起全球讀者共鳴。
+
+克雷格舒茲身為查爾斯舒茲的兒子，並且擔任《史努比 The Peanuts Movie》編劇及製片幽幽地說到：「查理布朗總是被說成魯蛇。但現實中，查理布朗是個贏家，因為他永不放棄。我們失去的永遠比贏得的多，沒人比查理布朗更適合說明這一點。」
+
+挾著社會評論的作用，查爾斯舒茲創造出深具智慧、諷刺、幽默和溫暖的角色與故事。1960年代中期，推出薄荷敏‧佩蒂這個內心住著小男孩的角色，擅長運動。這在二十一世紀的現在看似一般，但在1960年代畫出女孩和男孩在同一支球隊中運動，算是走在時代的尖端。幾年後的1968年，舒茲更推出第一個黑人角色－富蘭克林，他是薄荷敏‧佩蒂和瑪茜的同學兼隊友。
+
+舒茲將身邊的世界放進四格漫畫中，克雷格舒茲回想說到：「我總認為我爸是個偉大的觀察家，不管他去哪、做什麼，眼中都能看到連環漫畫的哏，他從不錯失說故事的機會。」
+
+查爾斯舒茲總有天賦能將重要主題自然納入他的畫格中，克雷格舒茲提到：「我父親卻從未因此而改變，五十年來從未對周遭變得憤世嫉俗，而這點也讓他受益良多，人們關注的大多是這些角色。」
+
+查理布朗總是弱勢的狀態、奈勒斯的心腸、富蘭克林的哲學、瑪茜的自省能力、露西的壞脾氣、莎莉對親親小甜心奈勒斯的單相思，以及史努比的各種個性，這些《花生漫畫》角色的個性都具有普世的特性，也是這些連環漫畫和角色在《花生漫畫》65週年紀念的今日仍具重要地位。
+
+《花生漫畫》在2000年停刊時，該連環漫畫擁有約3.5億讀者，分佈在全球21國，約2600份不同的報紙上。共計17,897則連環漫畫中，每一則都是由舒茲親筆畫下、上墨、排字（15,391則週間刊，2,506則週日刊），並且不斷再版，每天都在觸及新的讀者。
+今年，所有廣受喜愛的《花生漫畫》伙伴將在大螢幕上重回你我身邊，全都在《史努比 The Peanuts Movie》。
+
+
+© 2015 Twentieth Century Fox Film Corporation. All Rights Reserved. PEANUTS © Peanuts Worldwide LLC
+© 2015 Fox © Peanuts Worldwide LLC
+更新日期：2015-12-23</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ws3-JT-awf" firstAttribute="centerX" secondItem="knt-7S-YgV" secondAttribute="centerX" id="Bim-Ic-HfW"/>
+                                    <constraint firstItem="SWj-7n-lWP" firstAttribute="centerX" secondItem="knt-7S-YgV" secondAttribute="centerX" id="Fvq-hN-Wed"/>
+                                    <constraint firstItem="SWj-7n-lWP" firstAttribute="top" secondItem="ws3-JT-awf" secondAttribute="bottom" constant="41" id="Ix6-VT-60N"/>
+                                    <constraint firstAttribute="bottom" secondItem="SWj-7n-lWP" secondAttribute="bottom" constant="20" id="cv1-ng-s6J"/>
+                                    <constraint firstItem="ws3-JT-awf" firstAttribute="top" secondItem="knt-7S-YgV" secondAttribute="topMargin" constant="10" id="mxk-tJ-398"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="knt-7S-YgV" secondAttribute="trailing" id="0e1-ce-556"/>
+                            <constraint firstItem="knt-7S-YgV" firstAttribute="top" secondItem="9vK-6B-JdY" secondAttribute="bottom" constant="24" id="MOA-jD-cdX"/>
+                            <constraint firstItem="knt-7S-YgV" firstAttribute="leading" secondItem="90o-8d-bSe" secondAttribute="leadingMargin" id="xKS-qa-vU7"/>
+                            <constraint firstItem="SC1-zK-zQF" firstAttribute="top" secondItem="knt-7S-YgV" secondAttribute="bottom" constant="8" id="zdx-3v-cQa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="史努比" id="WhE-32-GQe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NL6-hW-2dD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2411" y="1011"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="psJ-Ae-ZDI">
+            <objects>
+                <viewController id="gH5-ah-u79" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2lx-cr-OH7"/>
+                        <viewControllerLayoutGuide type="bottom" id="aRi-1M-AKc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KsJ-64-OhW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="d7J-ON-SWb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCW-p7-bNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1741" y="1730"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Kf6-pP-kF2">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rAW-rc-sMj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="lXc-he-h5k">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="150-1C-ApB" kind="relationship" relationship="viewControllers" id="ZGV-rS-ukx"/>
+                        <segue destination="gg6-sD-C49" kind="relationship" relationship="viewControllers" id="FJZ-Ur-eTH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oaz-CY-3y5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="185" y="1361"/>
+        </scene>
+        <!--簽名-->
+        <scene sceneID="wBD-e9-4sJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gg6-sD-C49" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="簽名" id="8Qk-0W-es5"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8FO-in-3p7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gH5-ah-u79" kind="relationship" relationship="rootViewController" id="U16-XH-zNU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GaU-ge-L03" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1051" y="1730"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="5159" width="687" height="1024"/>
+        <image name="6009" width="716" height="1024"/>
+    </resources>
 </document>
