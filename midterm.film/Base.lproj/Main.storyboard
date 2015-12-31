@@ -175,8 +175,8 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="uwa-iP-Ibu"/>
                                                     <exclude reference="OhW-ry-wHu"/>
+                                                    <exclude reference="uwa-iP-Ibu"/>
                                                     <exclude reference="NrP-0A-5XD"/>
                                                 </mask>
                                             </variation>
@@ -211,7 +211,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knt-7S-YgV">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="knt-7S-YgV">
                                 <rect key="frame" x="0.0" y="88" width="600" height="455"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5159" translatesAutoresizingMaskIntoConstraints="NO" id="ws3-JT-awf">
@@ -226,7 +226,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="PfO-C4-lYw"/>
                                         </constraints>
-                                        <mutableString key="text">★ 全球最經典《花生漫畫》首度以3D動畫繪製躍上大銀幕《冰原歷險記》《里約大冒險》系列頂尖動畫製作團隊－藍天工作室操刀
+                                        <string key="text">★ 全球最經典《花生漫畫》首度以3D動畫繪製躍上大銀幕《冰原歷險記》《里約大冒險》系列頂尖動畫製作團隊－藍天工作室操刀
 ★ 原創者查爾斯舒茲第二、三代 克雷格舒茲及布萊恩舒茲共同擔任編劇
 
 查理布朗、史努比、露西、奈勒斯和所有廣受喜愛的《花生漫畫》伙伴即將前所未有地在大螢幕初登場，並以3D動畫形式與大家見面。查理布朗這位史上最受歡迎的小人物，即將展開他的最大使命，而他最可愛的伙伴史奴比要飛上天空去追逐他的頭號剋星—紅色男爵。來自查爾斯舒茲（Charles M. Schulz）的天馬行空，以及《冰原歷險記》製作團隊操刀，《史努比 The Peanuts Movie》將證明每個小人物也都能有一片天！
@@ -253,7 +253,7 @@
 
 © 2015 Twentieth Century Fox Film Corporation. All Rights Reserved. PEANUTS © Peanuts Worldwide LLC
 © 2015 Fox © Peanuts Worldwide LLC
-更新日期：2015-12-23</mutableString>
+更新日期：2015-12-23</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -262,21 +262,22 @@
                                 <constraints>
                                     <constraint firstItem="ws3-JT-awf" firstAttribute="centerX" secondItem="knt-7S-YgV" secondAttribute="centerX" id="Bim-Ic-HfW"/>
                                     <constraint firstItem="SWj-7n-lWP" firstAttribute="centerX" secondItem="knt-7S-YgV" secondAttribute="centerX" id="Fvq-hN-Wed"/>
+                                    <constraint firstItem="SWj-7n-lWP" firstAttribute="leading" secondItem="knt-7S-YgV" secondAttribute="leading" priority="999" constant="150" id="I3B-Dk-rpj"/>
                                     <constraint firstItem="SWj-7n-lWP" firstAttribute="top" secondItem="ws3-JT-awf" secondAttribute="bottom" constant="41" id="Ix6-VT-60N"/>
                                     <constraint firstAttribute="bottom" secondItem="SWj-7n-lWP" secondAttribute="bottom" constant="20" id="cv1-ng-s6J"/>
-                                    <constraint firstAttribute="trailing" secondItem="ws3-JT-awf" secondAttribute="trailing" constant="50" id="grr-up-CEe"/>
                                     <constraint firstItem="ws3-JT-awf" firstAttribute="top" secondItem="knt-7S-YgV" secondAttribute="topMargin" constant="10" id="mxk-tJ-398"/>
-                                    <constraint firstItem="ws3-JT-awf" firstAttribute="leading" secondItem="knt-7S-YgV" secondAttribute="leading" priority="999" constant="50" id="v4y-Bi-7od"/>
+                                    <constraint firstAttribute="trailing" secondItem="SWj-7n-lWP" secondAttribute="trailing" priority="999" constant="150" id="zCg-4L-f7N"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="knt-7S-YgV" secondAttribute="trailing" id="0e1-ce-556"/>
+                            <constraint firstItem="knt-7S-YgV" firstAttribute="width" secondItem="90o-8d-bSe" secondAttribute="width" id="69i-Ky-cbn"/>
                             <constraint firstAttribute="trailing" secondItem="knt-7S-YgV" secondAttribute="trailing" id="LdL-fD-dmF"/>
-                            <constraint firstItem="knt-7S-YgV" firstAttribute="top" secondItem="9vK-6B-JdY" secondAttribute="bottom" constant="24" id="aLR-dw-ry4"/>
+                            <constraint firstAttribute="bottom" secondItem="knt-7S-YgV" secondAttribute="bottom" id="UOw-XD-Gtu"/>
                             <constraint firstItem="knt-7S-YgV" firstAttribute="leading" secondItem="90o-8d-bSe" secondAttribute="leadingMargin" id="xKS-qa-vU7"/>
-                            <constraint firstItem="SC1-zK-zQF" firstAttribute="top" secondItem="knt-7S-YgV" secondAttribute="bottom" constant="8" id="y7W-lt-I7g"/>
+                            <constraint firstItem="knt-7S-YgV" firstAttribute="top" secondItem="90o-8d-bSe" secondAttribute="top" id="yHv-I6-weW"/>
                             <constraint firstItem="knt-7S-YgV" firstAttribute="leading" secondItem="90o-8d-bSe" secondAttribute="leading" id="z1Q-ji-cdD"/>
                         </constraints>
                         <variation key="default">
@@ -461,7 +462,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="VgG-ca-mWa"/>
                                         </constraints>
-                                        <mutableString key="text">★《美國隊長》克里斯伊凡首部自導自演愛情喜劇！
+                                        <string key="text">★《美國隊長》克里斯伊凡首部自導自演愛情喜劇！
 ★ 多倫多影展世界首映，浪漫氛圍廣受國際媒體好評！
 ★ 劇情真誠美好，妙語如珠媲美《愛在》系列三部曲！
 ★《雨人》《新娘不是我》金牌編劇最新力作！
@@ -469,7 +470,7 @@
 《在天色破曉之前，他們決定再給愛一次機會…》
 
 趕著凌晨一點半的最後一班火車，年輕女子布魯克（艾莉絲伊芙飾演）在途中被搶走了皮包。身無分文的她遊蕩在紐約街頭，正當她在中央車站徘徊時，另一位同樣被困在車站的小號樂手尼克（克里斯伊凡飾演）對她伸出援手。兩人一拍即合，決定一邊尋找布魯克被搶走的錢包，一邊散步回家。隨著時間一分一秒流逝，兩人穿過大大小小的巷弄¬，走過形形色色的霓虹燈，彼此也逐漸開始熟悉，並在生命中看見了不同的方向…。
-更新日期：2015-12-23</mutableString>
+更新日期：2015-12-23</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -497,8 +498,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Mef-NK-ijf"/>
                                 <exclude reference="76k-BB-E3u"/>
+                                <exclude reference="Mef-NK-ijf"/>
                             </mask>
                         </variation>
                     </view>
